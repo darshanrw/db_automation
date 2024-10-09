@@ -50,16 +50,14 @@ connection = mysql.connector.connect(
 # Execute the SQL script
 cursor = connection.cursor()
 
-# Ensure the SQL file name is in quotes
-sql_file = 'add_departments.sql'  # The file name should be a string
-
-# Open the SQL file and read its contents
-with open(sql_file, 'r') as file:
+# Open and execute the SQL script
+with open('add_departments.sql', 'r') as file:
     sql_script = file.read()
-
-for command in sql_script.split(';'):
-    if command.strip():
-        cursor.execute(command)
+    sql_commands = sql_script.split(';')
+    
+    for command in sql_commands:
+        if command.strip():
+            cursor.execute(command)
 
 connection.commit() # Commit all changes at once
 cursor.close()  # Close the cursor
