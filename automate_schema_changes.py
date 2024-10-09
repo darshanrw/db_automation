@@ -50,8 +50,9 @@ connection = mysql.connector.connect(
 
 cursor = connection.cursor()
 
-    for sql_file in [add_departments.sql]:
-        with open(sql_file, 'r') as file:
+# Ensure the SQL file name is in quotes
+    for sql_file in ['add_departments.sql']:  # Correctly formatted file name
+         with open(sql_file, 'r') as file:
             sql_script = file.read()
             for command in sql_script.split(';'):
                 if command.strip():
