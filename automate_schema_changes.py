@@ -5,13 +5,14 @@
 import mysql.connector
 import os
 
-"""
+
 connection = mysql.connector.connect(
     host=os.environ['DB_HOST'],
-    user=os.environ['DB_USERNAME'],
+    user=os.environ['DB_ADMIN_USER'],
     password=os.environ['DB_PASSWORD'],
-    database=os.environ['DB_DATABASE']
+    database=os.environ['DB_NAME']
 )
+
 """
 
 connection = mysql.connector.connect(
@@ -20,6 +21,7 @@ connection = mysql.connector.connect(
     password='Secret55',  
     database='companydb',
 )
+"""
 cursor = connection.cursor()
 
 # Open and execute the SQL script
