@@ -1,6 +1,6 @@
-# YML file - ci_cd_pipeline.yml
+# YML file - ci-cd.yml
 
-name: ci_cd_pipeline
+name: ci-cd
 
 on: [push]
 
