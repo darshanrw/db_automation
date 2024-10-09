@@ -5,13 +5,21 @@
 import mysql.connector
 import os
 
+"""
 connection = mysql.connector.connect(
     host=os.environ['DB_HOST'],
     user=os.environ['DB_USERNAME'],
     password=os.environ['DB_PASSWORD'],
     database=os.environ['DB_DATABASE']
 )
+"""
 
+connection = mysql.connector.connect(
+    host='db-ass-2.mysql.database.azure.com',  
+    user='rootdb',  
+    password='Secret55',  
+    database='companydb',
+)
 cursor = connection.cursor()
 
 # Open and execute the SQL script
