@@ -28,4 +28,4 @@ connection.commit() # Commit all changes at once
 cursor.close()  # Close the cursor
 connection.close()  # Close the connection
 
-print('Database changes applied successfully!')
+print('Database changes applied successfully!!!')
